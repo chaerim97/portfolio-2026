@@ -1,13 +1,20 @@
+var winWid = $(window).width();
+
 /* =========================
    Scroll Event AOS
    ========================= */
 $(function(){
-    AOS.init({
-        duration: 800,  // 애니메이션 지속 시간 (밀리초)
-        easing:'ease-in-out',  // 애니메이션의 이징 함수
-        once: true, // 초기 1번만 실행
-        mirror: false,
-    });
+
+    //모바일에선 aos 작동안함
+    if(winWid > 480){  
+        AOS.init({
+            duration: 800,  // 애니메이션 지속 시간 (밀리초)
+            easing:'ease-in-out',  // 애니메이션의 이징 함수
+            once: true, // 초기 1번만 실행
+            mirror: false,
+        });
+    }
+    
 });
 
 
@@ -214,8 +221,7 @@ $(function () {
 $(function(){
 
     function initSlick(){
-        var winWid = $(window).width();
-
+        
         if(winWid <= 960){
             // 이미 slick이면 다시 만들지 않음
             if(!$(".work-list").hasClass("slick-initialized")){
