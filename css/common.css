@@ -51,6 +51,3 @@ body::selection{background:#FF5F00; color:#fff;}
 @media screen and (max-width:480px){
   html,body{font-size:14px;}
 }
-@media screen and (max-width:425px){
-  html,body{font-size:13px;}
-}
